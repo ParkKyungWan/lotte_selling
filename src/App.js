@@ -8,7 +8,14 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
 function App() {
   return (
     <React.Fragment>
-      <Song / >
+      <Router>
+            <Switch basename = {process.env.PUBLIC_URL}>
+              <Route exact path="/" component={Song}/>  
+              <Route exact path="/detail"
+                    render={ () => <Young id=""/> }       //props 필요하면 이렇게 보내면 댑니당.
+              />
+            </Switch>
+      </Router>
     </React.Fragment>
   );
 }
