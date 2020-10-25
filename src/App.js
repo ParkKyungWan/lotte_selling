@@ -8,7 +8,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
 function App() {
   return (
     <React.Fragment>
-      <BrowserRouter basename = {process.env.PUBLIC_URL}>
+      <Switch basename = {process.env.PUBLIC_URL}>
         <Router>
           <Switch>
               <Route exact path="/" component={Song}/>  
@@ -17,7 +17,7 @@ function App() {
               />
           </Switch>
         </Router>
-      </BrowserRouter>
+      </Switch>
     </React.Fragment>
   );
 }
