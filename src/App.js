@@ -10,7 +10,7 @@ function App() {
     <React.Fragment>
       <Router>
             <Switch >
-              <Route path="/" component={Song}/>  
+              <Route exact path="/" component={Song}/>  
               <Route exact path="/detail"
                     render={ () => <Young id=""/> }       //props 필요하면 이렇게 보내면 댑니당.
               />
